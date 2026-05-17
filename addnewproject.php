@@ -27,12 +27,16 @@
             });
         });
 
-i // GitHub link helper alert (clickable link)
-        $("#github-link").on("click focus", function() {
+        // GitHub link helper alert (clickable link)
+        $("#github-link").on("focus click", function() {
             $("#linkAlert").show();
         });
 
-            // Form Validation for Terms
+        $("#github-account-link").on("click", function() {
+            alert("please add the project files in this account https://github.com/sjvpcollege and the username=sjvpcollege and password = Sjvp@bca18");
+        });
+
+        // Form Validation for Terms
         $(".f1").submit(function() {
             if (!$(".chk").prop("checked")) {
                 alert("Please accept the confirmation checkbox before saving.");
@@ -238,8 +242,8 @@ i // GitHub link helper alert (clickable link)
                         <label>GitHub Link (*)</label>
                         <input type="url" name="link" id="github-link" placeholder="https://github.com/username/project-repo" style="width:100%" />
                         <div id="linkAlert" class="confirm-box" style="display:none; margin-top: 10px;">
-                            Please insert the documents in this link:
-                            <a href="https://github.com/sjvpcollege" target="_blank" style="color: #8B1528; text-decoration: underline;">https://github.com/sjvpcollege</a>
+                            insert n this account
+                            <a id="github-account-link" href="https://github.com/sjvpcollege" target="_blank" style="color: #8B1528; text-decoration: underline; display: inline-block; margin-left: 6px;">https://github.com/sjvpcollege</a>
                         </div>
                     </div>
 
